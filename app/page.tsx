@@ -3,19 +3,7 @@ import Bouton from "@/componants/bouton"
 import Carte from "@/componants/carte"
 import Hero from "@/componants/hero"
 import Section from "@/componants/section"
-
-type Projet = {
-    id: number
-    titre: string
-    resume: string
-    categorie: string
-}
-
-const PROJETS: Projet[] = [
-    { id: 1, titre: "Brasserie Noue", resume: "Identité visuelle", categorie: "Marque" },
-    { id: 2, titre: "Station Orphée", resume: "Scène 3D", categorie: "3D" },
-    { id: 3, titre: "Signal perdu", resume: "Jeu d'exploration", categorie: "Jeu vidéo" },
-]
+import { PROJETS } from "@/data/projets"
 
 export default function Accueil() {
     return (
@@ -26,12 +14,13 @@ export default function Accueil() {
             />
             <Section titre="Mes projets">
                 <div className="grid gap-4 sm:grid-cols-3">
-                    {PROJETS.map((projet) => (
+                    {PROJETS.slice(0, 3).map((projet) => (
                         <Carte
                             key={projet.id}
                             titre={projet.titre}
                             resume={projet.resume}
                             categorie={projet.categorie}
+                            href={`/projets/${projet.slug}`}
                         />
                     ))}
                 </div>
