@@ -3,7 +3,7 @@ import Bouton from "@/components/bouton"
 import Carte from "@/components/carte"
 import Hero from "@/components/hero"
 import Section from "@/components/section"
-import { PROJETS } from "@/data/projets"
+import { PROJETS_ACCUEIL } from "@/data/projets"
 
 export default function Accueil() {
     return (
@@ -14,7 +14,7 @@ export default function Accueil() {
             />
             <Section titre="Mes projets">
                 <div className="grid gap-4 sm:grid-cols-3">
-                    {PROJETS.slice(0, 3).map((projet) => (
+                    {PROJETS_ACCUEIL.map((projet) => (
                         <Carte
                             key={projet.id}
                             titre={projet.titre}

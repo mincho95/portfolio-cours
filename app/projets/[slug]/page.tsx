@@ -1,6 +1,8 @@
 import { notFound } from "next/navigation"
 import Bouton from "@/components/bouton"
 import BoutonJaime from "@/components/bouton-jaime"
+import Etiquette from "@/components/etiquette"
+import ImageProjet from "@/components/image-projet"
 import { PROJETS } from "@/data/projets"
 
 type Props = {
@@ -17,15 +19,13 @@ export default async function PageProjet({ params }: Props) {
 
     return (
         <article className="py-12">
-            <img src={projet.image} alt={projet.titre} className="mb-8 h-64 w-full rounded bg-neutral-100 object-contain" />
+            <ImageProjet src={projet.image} alt={projet.titre} grande />
             <p className="text-xs uppercase text-neutral-500">{projet.categorie} - {projet.annee}</p>
             <h1 className="mt-2 text-4xl font-semibold">{projet.titre}</h1>
             <p className="mt-6 max-w-xl text-neutral-600">{projet.description}</p>
             <ul className="mt-6 flex flex-wrap gap-2">
                 {projet.tags.map((tag) => (
-                    <li key={tag} className="rounded border border-neutral-300 px-2 py-0.5 text-xs">
-                        {tag}
-                    </li>
+                    <Etiquette key={tag} texte={tag} />
                 ))}
             </ul>
             <div className="mt-8 flex gap-4">

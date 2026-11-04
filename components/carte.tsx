@@ -1,5 +1,7 @@
 import Link from "next/link"
 import BoutonJaime from "@/components/bouton-jaime"
+import Etiquette from "@/components/etiquette"
+import ImageProjet from "@/components/image-projet"
 
 type Props = {
     titre: string
@@ -14,7 +16,7 @@ type Props = {
 export default function Carte({ titre, resume, categorie, image, annee, tags, href }: Props) {
     return (
         <article className="rounded-lg border border-neutral-200 p-5">
-            <img src={image} alt={titre} className="mb-4 h-32 w-full rounded bg-neutral-100 object-contain" />
+            <ImageProjet src={image} alt={titre} />
             <p className="text-xs uppercase text-neutral-500">{categorie} - {annee}</p>
             <h3 className="mt-1 font-semibold">
                 {href ? <Link href={href}>{titre}</Link> : titre}
@@ -22,9 +24,7 @@ export default function Carte({ titre, resume, categorie, image, annee, tags, hr
             <p className="mt-2 text-sm text-neutral-600">{resume}</p>
             <ul className="mt-3 flex flex-wrap gap-2">
                 {tags.map((tag) => (
-                    <li key={tag} className="rounded border border-neutral-300 px-2 py-0.5 text-xs">
-                        {tag}
-                    </li>
+                    <Etiquette key={tag} texte={tag} />
                 ))}
             </ul>
             <div className="mt-4">

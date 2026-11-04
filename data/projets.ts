@@ -67,3 +67,5 @@ export const PROJETS: Projet[] = [
         tags: ["HTML", "CSS", "JavaScript", "WebGL"],
     },
 ]
+
+export const PROJETS_ACCUEIL: Projet[] = [PROJETS[0], PROJETS[1], PROJETS[2]]
