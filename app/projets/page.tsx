@@ -1,5 +1,5 @@
-import Carte from "@/componants/carte"
-import Section from "@/componants/section"
+import Carte from "@/components/carte"
+import Section from "@/components/section"
 import { PROJETS } from "@/data/projets"
 
 export default function Projets() {

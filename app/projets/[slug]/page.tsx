@@ -1,6 +1,6 @@
 import { notFound } from "next/navigation"
-import Bouton from "@/componants/bouton"
-import BoutonJaime from "@/componants/bouton-jaime"
+import Bouton from "@/components/bouton"
+import BoutonJaime from "@/components/bouton-jaime"
 import { PROJETS } from "@/data/projets"
 
 type Props = {

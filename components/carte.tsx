@@ -1,5 +1,5 @@
 import Link from "next/link"
-import BoutonJaime from "@/componants/bouton-jaime"
+import BoutonJaime from "@/components/bouton-jaime"
 
 type Props = {
     titre: string

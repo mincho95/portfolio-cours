@@ -1,5 +1,5 @@
-import Bouton from "@/componants/bouton"
-import Section from "@/componants/section"
+import Bouton from "@/components/bouton"
+import Section from "@/components/section"
 
 type Contact = {
     id: number

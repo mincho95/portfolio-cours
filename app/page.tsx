@@ -1,8 +1,8 @@
-import Accordeon from "@/componants/accordeon"
-import Bouton from "@/componants/bouton"
-import Carte from "@/componants/carte"
-import Hero from "@/componants/hero"
-import Section from "@/componants/section"
+import Accordeon from "@/components/accordeon"
+import Bouton from "@/components/bouton"
+import Carte from "@/components/carte"
+import Hero from "@/components/hero"
+import Section from "@/components/section"
 import { PROJETS } from "@/data/projets"
 
 export default function Accueil() {

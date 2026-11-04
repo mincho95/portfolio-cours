@@ -1,4 +1,4 @@
-import Bouton from "@/componants/bouton"
+import Bouton from "@/components/bouton"
 
 type Props = {
     titre: string
