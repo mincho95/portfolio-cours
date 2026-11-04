@@ -12,6 +12,9 @@ export default function Projets() {
                         titre={projet.titre}
                         resume={projet.resume}
                         categorie={projet.categorie}
+                        image={projet.image}
+                        annee={projet.annee}
+                        tags={projet.tags}
                         href={`/projets/${projet.slug}`}
                     />
                 ))}

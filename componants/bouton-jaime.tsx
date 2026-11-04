@@ -12,7 +12,7 @@ export default function BoutonJaime() {
     return (
         <button
             onClick={() => setAime(!aime)}
-            className={`rounded border px-3 py-1 text-sm ${style}`}
+            className={`cursor-pointer rounded border px-3 py-1 text-sm ${style}`}
         >
             {aime ? "J'aime" : "J'aime pas"}
         </button>
